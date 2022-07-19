@@ -1,0 +1,289 @@
+<!--Bismillahir Rahmanir Rahim-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>crud</title>
+    
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./Responsive.css/admin_post_responsive.css">
+        
+</head>
+<body>
+    
+
+    <!--Header Section-->
+
+
+    <section>
+        <div class="container-fluied">
+            <div class="row header">
+                <div class="col-2">
+                    <a class="navbar-brand" target="next" href="https://cu.ac.bd/">
+                        <div class="logo_img">
+                          <img src="./image/download.png" alt="">
+                        </div>
+                      </a>
+                </div>
+                <div class="col-8">
+                    <h2>University of Chittagong</h2> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Confirm modal-->
+    <!-- Button trigger modal -->
+
+  
+  <!-- Modal 
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--Insert Modal--> 
+
+   
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" style="font-size: 18px;font-weight: 700;font-family: '', Times, serif; color:orange;" id="exampleModalLabel">Add Student Information</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <section>
+                <div class="container add_post">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10 add_post_row">
+                            
+                            <form action="#" method="post" id="insert_form">
+            
+                                <div class="row mb-3">
+                                    <label for="colFormLabel" class="col-sm-2 col-form-label">ID</label>
+                                    <div class="col-sm-10">
+                    
+                                      <input type="text" name="name" id="sid" class="form-control" id="colFormLabel" placeholder="19701050">
+                                      
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="colFormLabel" class="col-sm-2 col-form-label">NAME</label>
+                                    <div class="col-sm-10">
+                    
+                                      <input type="text" id="name" name="" class="form-control" id="colFormLabel" placeholder="Ariful Islam">
+                                      
+                                    </div>
+                                </div>
+                
+                        
+                
+                                <div class="row mb-3">
+                                    <label for="colFormLabel" class="col-sm-2 col-form-label">DEPARTMENT</label>
+                                    <div class="col-sm-9">
+                                        <select style=" margin-left: 40px;" class="form-select" name="class" id="dpt" aria-label="Default select example">
+                                            <option selected>SELECT DEPARTMENT</option>
+                                                                        
+                                            
+                                          </select>
+                                    </div>
+                                </div>
+
+                                <div id="msg">
+                                    
+                                </div>
+                
+                               
+                
+                               <!-- <input type="submit" value="   SAVE   " class="btn btn-success" name="btn" id="" style="margin:13px 46px 9px 192px;">-->
+                
+                
+                            </form>
+                             
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" id="btn" class="btn btn-primary">Add Student</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+   <!--Edit Form Modal-->
+
+   
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" style="font-size: 18px;font-weight: 700;font-family: '', Times, serif; color:orange;" id="exampleModalLabel">Edit Student Information</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <section>
+                <div class="container add_post">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10 add_post_row">
+                            
+                            <form action="#" method="post" id="insert_form">
+            
+                                <div class="row mb-3">
+                                    <label for="colFormLabel" class="col-sm-2 col-form-label">ID</label>
+                                    <div class="col-sm-10">
+                    
+                                      <input type="text" name="name" id="Esid" class="form-control" id="colFormLabel" placeholder="19701050">
+                                      
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="colFormLabel" class="col-sm-2 col-form-label">NAME</label>
+                                    <div class="col-sm-10">
+                    
+                                      <input type="text" id="Ename" name="" class="form-control" id="colFormLabel" placeholder="Ariful Islam">
+                                      
+                                    </div>
+                                </div>
+                
+                        
+                
+                                <div class="row mb-3">
+                                    <label for="colFormLabel" class="col-sm-2 col-form-label">DEPARTMENT</label>
+                                    <div class="col-sm-9">
+                                        <select style=" margin-left: 40px;" class="form-select" name="class" id="Edpt" aria-label="Default select example">
+                                            <option selected>SELECT DEPARTMENT</option>
+                                                                        
+                                            
+                                          </select>
+                                    </div>
+                                </div>
+
+                                <div id="Emsg">
+                                    
+                                </div>
+                
+                               
+                
+                               <!-- <input type="submit" value="   SAVE   " class="btn btn-success" name="btn" id="" style="margin:13px 46px 9px 192px;">-->
+                
+                
+                            </form>
+                             
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" id="Editbtn" class="btn btn-primary">Edit Student</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+    <!--Admin post table-->
+
+
+    <section>
+        <div class="container-fluid admin_post">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 admin_post_up">
+                    <h2>Students Information</h2>
+                </div>
+                <div class="col-xl-6 admin_post_up">
+                    <!--modal call-->
+                    <a data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    href="#"><span>ADD STUDENT</span></a>
+
+                </div>
+            </div>
+            <h3 id="delete_msg"></h3>
+            <div class="row justify-content-center">
+                <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 admin_post_down">
+                    <table class="table table-hover table-striped table-responsive-sm">
+            
+                        <thead>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <th>DEPARTMENT</th>
+                            <th>EDIT</th>
+                            <th>DELETE</th>
+                        </thead>
+                        <tbody id="tbody">
+                          
+                        </tbody>
+        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+     <!--Java script-->
+
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- JQuery -->
+
+    <script src="./js/jquery.js" ></script>
+    <script src="./js/my_jq_ajax.js" ></script>
+
+
+</body>
+</html>

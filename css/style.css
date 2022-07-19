@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+
+.header{
+    background: black;
+}
+
+.header h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "", Times, serif;
+    color: rosybrown;
+    letter-spacing: 5px;
+    padding: 30px 8px;
+}
+.logo_img{
+    width: 51px;
+    margin-top: 17px;
+    margin-left: 20px;
+}
+.logo_img img{
+    width: 100%;
+}
+
+
+/* --Admin post table--*/
+
+.admin_post{}
+.admin_post_up{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.admin_post_up h2{
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "", Times, serif;
+    letter-spacing: 4px;
+}
+.admin_post_up a{
+    text-decoration: none;
+}
+.admin_post_up a span{
+    background: black;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    transition: 0.4s;
+}
+.admin_post_up a:hover span{
+    background-color: red;
+    columns: ;
+}
+.admin_post_down{
+    box-shadow: 0px 0px 60px 0px #e9e9e9;
+}
+.admin_post_down table{}
+.admin_post_down table{}
+.admin_post_down table{}
+
+
+/* modal */
+
+.add_post{
+    margin-top: 50px;
+}
+.add_post_row{
+    box-shadow: 0px 0px 60px 0px #e9e9e9;
+    margin-top: -50px;
+    width: 92%;
+    height: 250px;
+}
+
+.add_post_row form{
+    padding: 40px 20px;
+}
+.admin_post_down{
+    box-shadow: 0px 0px 60px 0px #e9e9e9;
+    padding: 22px 34px;
+    border-radius: 45px;
+}
+.admin_post_down th{
+    color: red;
+}
+
+/* Animation Delete */
+
+.del-msg{
+    visibility: hidden;
+    opacity: 1;
+    animation: name 1s normal;
+    animation-delay: 1s;
+    animation-duration: 1s;
+}
+
+@keyframes name{
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    25%{
+        visibility: visible;
+        opacity: 0.6;
+    }
+    75%{
+        visibility: visible;
+        opacity: 0.3;
+    }
+    100%{
+        visibility: visible;
+        opacity: 0;
+    }
+    
+}
